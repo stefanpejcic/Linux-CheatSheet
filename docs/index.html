@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script>document.getElementsByTagName("html")[0].className += " js";</script>
+		<link rel="stylesheet" href="css/style2.css">
+        <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
+
+        <title>Linux Cheat Sheet</title>
+        <meta name="description" content="CF Cheat Sheet - A reference for ColdFusion Tricks.">
+
+        <link rel="stylesheet" href="css/style.css">
+
+        <link rel="apple-touch-icon" sizes="180x180" href="img/images.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/images.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/images.png">
+        <link rel="shortcut icon" href="img/favicon.ico">
+        <meta name="theme-color" content="#ffffff">
+
+        <meta property="og:url" content="https://github.com/stefanpejcic/coldfusion">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="ColdFusion Cheat Sheet">
+        <meta property="og:image" content="https://github.com/stefanpejciccoldfusion/img/social.jpg">
+        <meta property="og:description" content="ColdFusion Cheat Sheet - A reference for CSS goodness.">
+        <meta property="og:site_name" content="ColdFusion Cheat Sheet">
+        <meta property="og:locale" content="en_GB">
+
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@StefanPejcic>
+        <meta name="twitter:creator" content="@StefanPejcic">
+        <meta name="twitter:url" content="https://github.com/stefanpejcic/coldfusion">
+        <meta name="twitter:title" content="ColdFusion Cheat Sheet">
+        <meta name="twitter:description" content="ColdFusion Cheat Sheet - A reference for CF goodness.">
+        <meta name="twitter:image" content="https://github.com/stefanpejcic/coldfusion/img/images.png">
+
+        <meta itemprop="name" content="ColdFusion Cheat Sheet">
+        <meta itemprop="description" content="ColdFusion Cheat Sheet - A reference for CF goodness.">
+        <meta itemprop="image" content="https://github.com/stefanpejcic/coldfusion/img/img/images.png">
+		
+        <meta name="robots" content="index,follow,noodp">
+        <meta name="googlebot" content="index,follow">
+
+        <meta name="format-detection" content="telephone=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,600,700" rel="stylesheet">
+		
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="bgBlob bgBlob--1"></div>
+        <div class="bgBlob bgBlob--2"></div>
+        <div class="svgcompile"><svg xmlns="http://www.w3.org/2000/svg"><symbol viewBox="0 0 14 11.9" id="github"><title>github</title> <g> <g> <path d="M9.4,6.9c0.3,0,0.5,0.1,0.7,0.4c0.2,0.3,0.3,0.6,0.3,1c0,0.4-0.1,0.7-0.3,1C9.9,9.5,9.7,9.6,9.4,9.6
+            c-0.3,0-0.5-0.1-0.7-0.4C8.5,9,8.4,8.7,8.4,8.3c0-0.4,0.1-0.7,0.3-1C8.9,7,9.2,6.9,9.4,6.9 M12.9,3.3c0.7,0.8,1.1,1.8,1.1,3
+            c0,0.7-0.1,1.4-0.3,2c-0.2,0.6-0.4,1.1-0.7,1.5c-0.3,0.4-0.6,0.7-1,1c-0.4,0.3-0.7,0.5-1.1,0.6c-0.3,0.1-0.7,0.2-1.1,0.3
+            c-0.4,0.1-0.7,0.1-0.9,0.1c-0.2,0-0.4,0-0.7,0c-0.1,0-0.2,0-0.5,0c-0.3,0-0.6,0-0.8,0s-0.5,0-0.8,0c-0.3,0-0.5,0-0.5,0
+            c-0.2,0-0.5,0-0.7,0c-0.2,0-0.5-0.1-0.9-0.1c-0.4-0.1-0.8-0.2-1.1-0.3c-0.3-0.1-0.7-0.3-1.1-0.6c-0.4-0.3-0.7-0.6-1-1
+            C0.7,9.4,0.4,8.9,0.3,8.3C0.1,7.7,0,7,0,6.3c0-1.2,0.4-2.1,1.1-3C1,3.3,1,2.9,1.1,2.1C1.2,1.4,1.3,0.7,1.6,0
+            c0.9,0.1,2.1,0.6,3.5,1.6C5.5,1.5,6.2,1.4,7,1.4c0.9,0,1.5,0.1,1.9,0.2c0.6-0.4,1.2-0.8,1.8-1c0.6-0.3,1-0.4,1.3-0.5L12.4,0
+            c0.3,0.6,0.4,1.4,0.5,2.1C13,2.9,13,3.3,12.9,3.3 M7,11.2c1.7,0,3-0.2,3.8-0.6c0.9-0.4,1.3-1.2,1.3-2.5c0-0.7-0.3-1.3-0.8-1.8
+            c-0.3-0.3-0.6-0.4-1-0.5c-0.4-0.1-0.9-0.1-1.7,0C7.8,5.8,7.3,5.8,7,5.8c-0.4,0-0.8,0-1.3-0.1c-0.5,0-0.9-0.1-1.2-0.1
+            c-0.3,0-0.6,0-1,0.1C3.2,5.9,2.9,6,2.7,6.2C2.2,6.7,1.9,7.3,1.9,8.1c0,1.3,0.4,2.1,1.3,2.5C4,11,5.3,11.2,7,11.2L7,11.2 M4.6,6.9
+            c0.3,0,0.5,0.1,0.7,0.4c0.2,0.3,0.3,0.6,0.3,1c0,0.4-0.1,0.7-0.3,1C5.1,9.5,4.9,9.6,4.6,9.6c-0.3,0-0.5-0.1-0.7-0.4
+            C3.7,9,3.6,8.7,3.6,8.3c0-0.4,0.1-0.7,0.3-1C4.1,7,4.3,6.9,4.6,6.9"/> </g> </g> </symbol></svg></div>
+
+        <header class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="sidebar__title">Linux</h5>
+                </div>
+                <div class="col">
+                    <div class="icon">
+                      <div class="top"></div>
+                      <div class="mid"></div>
+                      <div class="bot"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="sidebar">
+            <h5 class="sidebar__title">Linux</h5>
+
+            <nav class="sidebar__nav">
+                <ul>
+                    <li><a href="#system">System Info</a></li>
+                    <li><a href="#performance">Performance</a></li>
+                    <li><a href="#users">Users</a></li>
+                    <li><a href="#files">Files</a></li>
+                    <li><a href="#process">Processes</a></li>
+                    <li><a href="#network">Networking</a></li>
+					<li><a href="#archives">Archives</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#search">Search</a></li>
+                    <li><a href="#ssh">SSH</a></li>
+                    <li><a href="#transfer">File Transfer</a></li>
+					<li><a href="#hardware">Hardware Info</a></li>
+					<li><a href="#disk">Disk usage</a></li>
+					<li><a href="#directory">Directory</a></li>
+                </ul>
+            </nav>
+
+            <div class="social">
+			<p style="margin-bottom:10px;">join the dark side</p>
+			<div class="switch" style="margin-bottom:10%;">
+                <input class="switch__input" type="checkbox" id="themeSwitch">
+                <label aria-hidden="true" class="switch__label" for="themeSwitch">On</label>
+                <div aria-hidden="true" class="switch__marker"></div>
+            </div>
+                <a target="_blank" href="https://github.com/stefanpejcic/coldfusion"><svg viewBox="0 0 14 11.9"><use xlink:href="#github"/></svg> Contribute</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="content__title">Linux CheatSheet</h1>
+            <h3 class="content__subTitle">All Linux Command Line Sheet</h3>
+
+            <div class="container">
+                <a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/stefanpejcic"><img src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg" alt="Buy me a cup of coffee"><span style="margin-left:5px">Donate a Cup of Coffee ❤️</span></a>
+            </div>
+<div class='post-header-line-1'></div>
+<div class='post-body entry-content'>
+<article style="padding-right:100px">
+<div dir="ltr" style="text-align: left;" trbidi="on">
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="system" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">System Information</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>uname -a</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display Linux system information<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>uname -r</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display kernel release information<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>cat /etc/redhat-release</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show which version of redhat installed<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>uptime</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show how long the system has been running + load<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>hostname</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show system host name<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>hostname -I</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the IP addresses of the host<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>last reboot</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show system reboot history<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>date</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show the current date and time<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>cal</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show this month's calendar<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>w</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display who is online<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b class="">whoami</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Who you are logged in as</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<div>
+<br />
+<br /></div>
+<div>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span  id="performance" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Performance Monitoring and Statistics</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>top</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display and manage the top processes<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>htop</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Interactive process viewer (top alternative)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>mpstat 1</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display processor related statistics<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>vmstat 1</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display virtual memory statistics<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>iostat 1</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display I/O statistics<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>tail 100 /var/log/messages</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the last 100 syslog messages (Use<o:p></o:p></span></div>
+<div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">/var/log/syslog for Debian based systems.)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>tcpdump -i eth0</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Capture and display all packets on interface eth0<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>tcpdump -i eth0 'port 80'</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Monitor all traffic on port 80 (HTTP)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b class="">lsof</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">List all open files on the system<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>lsof -u user</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">List files opened by user<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 148.6pt;" valign="top" width="198"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>watch df -h</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 302.2pt;" valign="top" width="403"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">showing periodic updates<o:p></o:p></span></div>
+</td>
+ </tr>
+</tbody></table>
+</div>
+<div>
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><br /></span> <span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><br /></span></div>
+<div>
+</div>
+<div>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span  id="users" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">User Information and Management</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>Id</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the user and group ids of your current user<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>last</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the last users who have logged onto the system<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>who</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show who is logged into the system<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>w</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show who is logged in and what they are doing<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>groupadd test</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create a group named "test"<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>useradd -c "Subhash" -m subhash</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create an account named subhash, with a comment of "Subhash" and create the user's home directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>userdel subhash</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Delete the subhash account<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>usermod -aG it subhash</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Add the subhash account to the it group</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+</div>
+<div>
+<br />
+<br /></div>
+<div>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="files" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Files and Directory Commands</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>ls -al</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">List all files in a long listing (detailed) format<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>pwd</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the present working directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>mkdir directory</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create a directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>rm file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Remove (delete) file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>rm -r directory</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Remove the directory and its contents recursively<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>rm -f file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Force removal of file without prompting for confirmation<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>rm -rf directory</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Forcefully remove directory recursively<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>cp file1 file2</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Copy file1 to file2<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>cp -r source_directory destination</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Copy source directory recursively to destination. If destination exists, copy source directory into destination, otherwise create destination with the contents of source directory.<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>mv file1 file2</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Rename or move file1 to file2. If file2 is an existing directory, move file1 into directory file2<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>ln -s /path/to/file linkname</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create symbolic link to linkname<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>touch file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create an empty file or update the access and modification times of file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>cat file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">View the contents of file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>less file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Browse through a text file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>head file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the first 10 lines of file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>tail file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the last 10 lines of file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 191.15pt;" valign="top" width="255"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><b>tail -f file</b><o:p></o:p></span></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 259.65pt;" valign="top" width="346"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the last 10 lines of file and "follow" the file as it grows</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+</div>
+<div>
+<br />
+<br /></div>
+<div>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="process" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Process Management</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ps<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display your currently running processes<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ps -ef<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display all the currently running processes on the system<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ps -ef | grep processname<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display process information for processname<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">top<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display and manage the top processes<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">htop<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Interactive process viewer (top alternative)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">kill pid<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Kill process with process ID of pid<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">killall processname<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Kill all processes named processname<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">program &amp;<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Start program in the background<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">bg<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display stopped or background jobs<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">fg<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Brings the most recent background job to foreground<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 155.7pt;" valign="top" width="208"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">fg n<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 295.1pt;" valign="top" width="393"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Brings job n to the foreground<o:p></o:p></span></div>
+</td>
+ </tr>
+</tbody></table>
+</div>
+<div>
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><br /></span> <span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><br /></span></div>
+<div>
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="network" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Networking</span><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;"><o:p></o:p></span></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ifconfig -a<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display all network interfaces and ip address<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ifconfig eth0<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display eth0 address and details<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ethtool eth0<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Query or control network driver and hardware settings<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ping host<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Send ICMP echo request to host<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">whois domain<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display whois information for domain<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">dig domain<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display DNS information for domain<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">dig -x IP_ADDRESS<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Reverse lookup of IP_ADDRESS<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">host domain<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display DNS ip address for domain<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">hostname -i<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display the network address of the hostname<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">hostname -I<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display all local ip addresses<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">wget <a href="http://domain.com/file">http://domain.com/file</a><o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Download <a href="http://domain.com/file">http://domain.com/file</a><o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 162.8pt;" valign="top" width="217"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">netstat -nutlp<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 288.0pt;" valign="top" width="384"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display listening tcp and udp ports and corresponding programs</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="archive" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Archives</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar cf archive.tar directory<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create tar named archive.tar containing directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar xf archive.tar<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Extract the contents from archive.tar<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar czf archive.tar.gz directory<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create a gzip compressed tar file name archive.tar.gz<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar xzf archive.tar.gz<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Extract a gzip compressed tar file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar cjf archive.tar.bz2 directory<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Create a tar file with bzip2 compression<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">tar xjf archive.tar.bz2<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Extract a bzip2 compressed tar file</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="packages" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Installing Packages</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">yum search keyword<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Search for a package by keyword<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">yum install package<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Install package<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">yum info package<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display description and summary information about package<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">rpm -i package.rpm<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Install package from local file named package.rpm<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">yum remove package<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Remove/uninstall package</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="search" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Search</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 176.95pt;" valign="top" width="236"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">grep pattern file<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 273.85pt;" valign="top" width="365"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Search for pattern in file<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 176.95pt;" valign="top" width="236"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">grep -r pattern directory<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 273.85pt;" valign="top" width="365"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Search recursively for pattern in directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 176.95pt;" valign="top" width="236"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">locate name<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 273.85pt;" valign="top" width="365"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Find files and directories by name<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 176.95pt;" valign="top" width="236"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">find /home/john -name 'prefix*'<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 273.85pt;" valign="top" width="365"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Find files in /home/john that start with "prefix"<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 176.95pt;" valign="top" width="236"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">find /home -size +100M<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 273.85pt;" valign="top" width="365"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Find files larger than 100MB in /home<o:p></o:p></span></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="ssh" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">SSH</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ssh host<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Connect to host as your local username<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ssh user@host<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Connect to host as user<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 113.15pt;" valign="top" width="151"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">ssh -p port user@host<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 337.65pt;" valign="top" width="450"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Connect to host using port<o:p></o:p></span></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="transfer" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">File Transfer</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">scp file.txt server:/tmp<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Secure copy file.txt to the /tmp folder on server<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">scp server:/var/www/*.html /tmp<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Copy *.html files from server to the local /tmp folder<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">scp -r server:/var/www /tmp<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Copy all files and directories recursively from server to the current system's /tmp folder<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">rsync -a /home /backups/<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Synchronize /home to /backups/home<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 184.05pt;" valign="top" width="245"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">rsync -avz /home server:/backups/<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 266.75pt;" valign="top" width="356"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Synchronize files/directories between the local and remote system with compression enabled<o:p></o:p></span></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="hardware" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Hardware Information</span></b><o:p></o:p></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: justify;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">dmesg<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display messages in kernel ring buffer<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">cat /proc/cpuinfo<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display CPU information<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">cat /proc/meminfo<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display memory information<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">free -h<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display free and used memory (-h for human readable, -m for MB, -g for GB.)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">lspci -tv<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display PCI devices<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">lsusb -tv<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display USB devices<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">dmidecode<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display DMI/SMBIOS (hardware info) from the BIOS<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">hdparm -i /dev/sda<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show info about disk sda<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">hdparm -tT /dev/sda<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Perform a read speed test on disk sda<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 120.25pt;" valign="top" width="160"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">badblocks -s /dev/sda<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 330.55pt;" valign="top" width="441"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Test for unreadable blocks on disk sda</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="disk" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Disk Usage</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">df -h<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show free and used space on mounted filesystems<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">df -i<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Show free and used inodes on mounted filesystems<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">fdisk -l<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display disks partitions sizes and types<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">du -ah<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display disk usage for all files and directories in human readable format<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">du -sh<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Display total disk usage off the current directory</span><o:p></o:p></div>
+</td>
+ </tr>
+</tbody></table>
+<br />
+<br />
+<table border="1" cellpadding="0" cellspacing="0" class="MsoTableGrid" style="border-collapse: collapse; border: none; mso-border-alt: solid windowtext .5pt; mso-padding-alt: 0cm 5.4pt 0cm 5.4pt; mso-yfti-tbllook: 1184;">
+ <tbody>
+<tr>
+  <td colspan="2" style="background: #70AD47; border: solid windowtext 1.0pt; mso-background-themecolor: accent6; mso-border-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 450.8pt;" valign="top" width="601"><div align="center" class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm; text-align: center;">
+<b><span id="directory" style="font-family: &quot;verdana&quot; , sans-serif; font-size: large;">Directory Navigation</span><o:p></o:p></b></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">cd&nbsp;..<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">To go up one level of the directory tree. (Change into the parent directory.)<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #F4B083; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">cd<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #F4B083; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent2; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Go to the $HOME directory<o:p></o:p></span></div>
+</td>
+ </tr>
+<tr>
+  <td style="background: #9CC2E5; border-top: none; border: solid windowtext 1.0pt; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 49.4pt;" valign="top" width="66"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<b><span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">cd /opt<o:p></o:p></span></b></div>
+</td>
+  <td style="background: #9CC2E5; border-bottom: solid windowtext 1.0pt; border-left: none; border-right: solid windowtext 1.0pt; border-top: none; mso-background-themecolor: accent5; mso-background-themetint: 153; mso-border-alt: solid windowtext .5pt; mso-border-left-alt: solid windowtext .5pt; mso-border-top-alt: solid windowtext .5pt; padding: 0cm 5.4pt 0cm 5.4pt; width: 401.4pt;" valign="top" width="535"><div class="MsoNormal" style="line-height: 200%; margin-bottom: .0001pt; margin-bottom: 0cm;">
+<span style="font-family: &quot;trebuchet ms&quot; , sans-serif;">Change to the /opt directory</span></div>
+</td></tr>
+</tbody></table>
+</div>
+</div>
+
+            </section>
+
+            <footer>
+                <p>Built & Maintained by <a target="_blank" href="https://www.facebook.com/stefanneropejcic">Stefan Pejcic</a></p><small>ColdFusion is a trademark of Adobe Systems Incorporated.</small>
+            </footer>
+
+        </div>
+
+        <script src="js/main.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+    </body>
+</html>
